@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        img {
+            width: 1842px;
+            height: 853px;
+            object-fit: cover;
+            cursor: default;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="C:\Users\proletarhiat 2\Downloads\111.jpg" alt="Center Image" onclick="checkClick(event)">
+
+    <script>
+        function checkClick(event) {
+            const img = document.querySelector('img');
+            const imgRect = img.getBoundingClientRect();
+            const x = event.clientX - imgRect.left;
+            const y = event.clientY - imgRect.top;
+
+            // Check if the click is within the specified coordinates
+            if (x >= 850 && x <= 851 && y >= 450 && y <= 451) {
+                // Open a new window or customize this function as needed
+                window.open('new_window.html', '_blank', 'width=800,height=600');
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
